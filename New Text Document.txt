@@ -1,4 +1,8 @@
 testts
 
+<<<<<<< HEAD
 
 Sumanth1branch merge
+=======
+sumanth2 branch
+>>>>>>> sumanth2

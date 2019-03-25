@@ -1,0 +1,15 @@
+Yaml: Ain't Markup language.
+1. YAML is a data serialization language designed to be directly wirtable and readable by humans.
+2. mainy used for configuration files but in many application is is used where data needs to be transmitted over the network.
+3. YAML is a superset of JSON with additonal features like "new line and indentation".
+4. YAML is a scripting language which means we can communicate with other languages using YAML. 
+    Other languages means, OS, any application or service running on OS etc.,
+5. There are three editions in YAML scripting:
+    - 1.2 third edition
+    - 1.1 second edition
+    - 1.0 first edition
+6. YAML scripting extension:
+    -.yaml
+    -.yml 
+7. YAML is case sensitive scripting language.
+8. YAML doesnot allow the use of tabs for indentation instead we can use spaces in places of tabs.

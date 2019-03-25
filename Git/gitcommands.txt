@@ -1,0 +1,54 @@
+TO change username and email:
+=============================
+$ git config --global user.name 'Tssumanth18'
+$ git config --global user.email 'tssumanth18@gmail.com'
+
+To list all configurations:
+===========================
+$ git config --list
+
+To Clone the Repository:
+=======================
+Navigate to the folder in which u want to clone the repository.
+git clone https://github.com/TSSumanth/SumanthRepository.git
+
+To check list of branches:
+==========================
+git branch -a 
+
+To check status of the branch:
+=============================
+git status
+
+To add all changes to branch:
+============================
+git add -a
+
+To add single change to branch:
+===============================
+git add <filename>
+
+To remove single file changes:
+=============================
+git reset <filename>
+
+To remove all changes made:
+==========================
+git reset
+
+To commit changes to local branch:
+==================================
+git commit -m "<Commit message>"
+
+To push all the commited local changes to remote branch:
+========================================================
+git push
+
+To create a new branch:
+=======================
+git branch <branch-name>
+
+To checkout a branch:
+====================
+git checkout <branch-name>
+

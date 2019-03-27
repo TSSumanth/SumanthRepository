@@ -1,0 +1,28 @@
+<html>
+   <head>
+      <title>Javascript External Script</title>
+         <script type = "text/JavaScript">
+          function fun(){
+            var table='';
+            var rows=7;
+                     for(let i=0;i<2;i++)
+                     {
+                        table +='<tr>'
+                           for(let x=0; x< rows; x++)
+                           {
+                                 table+='<td>'+x+'</td>'
+                           }
+                        table +='</tr>'
+                     }
+            document.write('<table>'+table+'</table>');
+            document.write("script document")
+            <p>inside script</p>
+         } 
+         </script> 
+   </head>
+   <body> 
+      <p>Test Sumanth</p> 
+      fun()  
+
+   </body>
+</html>

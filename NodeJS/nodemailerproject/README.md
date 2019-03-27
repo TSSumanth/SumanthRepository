@@ -1,0 +1,1 @@
+Command to execute script with ts-node: node --require ts-node/register samplehtmlemail.ts

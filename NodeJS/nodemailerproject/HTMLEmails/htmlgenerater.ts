@@ -1,3 +1,5 @@
+let readdata=require('./ReadDatafromJson');
+let resultsmap:Map<string,string[]>=readdata.map
 var noofrows=4;
 var noofcols=4;
 export var htmlstring=`<!DOCTYPE html>
@@ -12,24 +14,38 @@ export var htmlstring=`<!DOCTYPE html>
     <table border=1>
         <thead>
             <tr>
-                <th>ScriptName</th>
+                <th>Test Suite Name</th>
+                <th>Total Tests</th>
                 <th>Passed</th>
                 <th>Failed</th>
-                <th>No Run</th>
             </tr>
         </thead>
         <tbody>`;
-
+let totaltests:number=0;
+let totalpassed:number=0;
+let totalfailed:number=0;
 let appendstring="";
-for (let row=0;row<noofrows;row++)
+for (let testnames of resultsmap.keys())
 {
     appendstring=appendstring+'<tr>';
-        for(let col=0;col<noofcols;col++)
-        {
-            appendstring=appendstring+'<td>'+"Value in call"+'</td>';
-        } 
-        appendstring=appendstring+'</tr>';
+    appendstring=appendstring+'<td>'+testnames+'</td>'; 
+    let results="";
+    results=resultsmap.get(testnames)+"";
+    let values:string[]=results.split(","); 
+    totaltests=totaltests+parseInt(values[0]);
+    totalpassed=totalpassed+parseInt(values[1]);
+    totalfailed=totalfailed+parseInt(values[2]);
+    for(let x=0;x<values.length;x++)
+    {
+        appendstring=appendstring+'<td>'+values[x]+'</td>';  
+    }
+    appendstring=appendstring+'</tr>';
 }
+appendstring=appendstring+'<tr>';
+    appendstring=appendstring+'<td>'+"Total"+'</td>'; 
+    appendstring=appendstring+'<td>'+totaltests+'</td>'; 
+    appendstring=appendstring+'<td>'+totalpassed+'</td>'; 
+    appendstring=appendstring+'<td>'+totalfailed+'</td>'; 
 appendstring=appendstring+` </tbody>
 </table>
 </body>
@@ -37,4 +53,4 @@ appendstring=appendstring+` </tbody>
 </html>`;
 
 htmlstring=htmlstring+appendstring;
-         
+

@@ -52,3 +52,7 @@ To checkout a branch:
 ====================
 git checkout <branch-name>
 
+To list all the branches:
+=========================
+git branch -a
+
